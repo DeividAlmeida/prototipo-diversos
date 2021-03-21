@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  width: 100vw;
+  height: 100vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+/*Left + Right Triggers*/
+
+.trig {
+  width: 25px;
+  height: 35px;
+  position: absolute;
+  border-radius: 3px;
+  top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.trig:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.l-trig {
+  left: -35px;
+}
+
+.r-trig {
+  right: -35px;
+}
+
+.l-trig span:nth-child(1) {
+  background-color: lightgrey;
+  position: absolute;
+  width: 5px;
+  height: 65%;
+  transform: rotate(45deg);
+  top: 0;
+  left: 7px;
+  border-radius: 3px;
+}
+
+.l-trig span:nth-child(2) {
+  background-color: lightgrey;
+  position: absolute;
+  width: 5px;
+  height: 65%;
+  transform: rotate(-45deg);
+  bottom: 0;
+  left: 7px;
+  border-radius: 3px;
+}
+
+.r-trig span:nth-child(1) {
+  background-color: lightgrey;
+  position: absolute;
+  width: 5px;
+  height: 65%;
+  transform: rotate(-45deg);
+  top: 0;
+  right: 7px;
+  border-radius: 3px;
+}
+
+.r-trig span:nth-child(2) {
+  background-color: lightgrey;
+  position: absolute;
+  width: 5px;
+  height: 65%;
+  transform: rotate(45deg);
+  bottom: 0;
+  right: 7px;
+  border-radius: 3px;
+}
+main {
+  width: 60%;
+  height: 520px;
+  margin:50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  background-color: lightgrey;
+  border-radius: 5px;
+}
+
+#display_img {
+  position: absolute;
+  top: 0;
+  width: auto;
+  max-height: 400px;
+  margin-top: 5px;
+}
+#limite{
+  overflow: hidden;
+  position: absolute;
+  height: 520px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.gal_img:hover {
+  cursor: pointer;
+}
+
+  .gal_img {
+    height: 80px;
+    position: relative;
+    top: 82%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .gal_img:hover {
+    cursor: pointer;
+  }
+  .trig {
+    top: 230px;
+  }
+  .trig:hover {
+    cursor: pointer;
+  }
+#root{
+  width: 100%;
+  height:100%
+}
+@media screen and (max-width: 900px) {
+  .gal_img {
+    height: 80px;
+    position: relative;
+    top: 82%;
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }
