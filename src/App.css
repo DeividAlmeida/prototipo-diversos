@@ -1,9 +1,11 @@
 
 
-* {
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  height: auto;
 }
 
 body {
@@ -81,22 +83,15 @@ body {
   border-radius: 3px;
 }
 main {
-  width: 60%;
-  height: 520px;
-  margin:50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  background-color: lightgrey;
-  border-radius: 5px;
+	width: 100%;
+	height:100%;
 }
 
 #display_img {
   position: absolute;
   top: 0;
   width: auto;
-  max-height: 400px;
+  max-height: 450px;
   margin-top: 5px;
 }
 #limite{
@@ -113,32 +108,127 @@ main {
 }
 
   .gal_img {
-    height: 80px;
-    position: relative;
-    top: 82%;
-    margin-left: 20px;
-    margin-right: 20px;
+	height: 42px;
+	position: relative;
+	top: 82%;
+	margin-left: 5px;
+	margin-right: 5px;
   }
 
   .gal_img:hover {
-    cursor: pointer;
+	cursor: pointer;
   }
   .trig {
-    top: 230px;
+	top: 230px;
   }
   .trig:hover {
-    cursor: pointer;
+	cursor: pointer;
   }
 #root{
   width: 100%;
-  height:100%
+  height:100%;
+}
+#gallery{
+	width: 50%;
+	height: 520px;
+	position: relative;
+	background-color: lightgrey;
+	border-radius: 5px;
+}
+#contact{
+	width: 32%;
+	margin-left:7%;
+	position:relative;
+	bottom:50px;
+}
+#lista{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	justify-content: space-between;
+	display: flex;
+	padding: 8%;
+	border-radius:20px;
+}
+#bold{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#descricao{
+    padding: 5%;
+}
+#descricao b{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+#descricao p {
+	text-align: justify;
+	border-left:solid 10px lightsteelblue;
+	padding-left: 25px;
+}
+#media{
+	display: grid;
+    justify-content: center;
+	width: 75%;
+    margin: 1% 12% 12% 12%;
+}
+.icone{
+	height:52px;
+	cursor: pointer;
+	padding: 5px;
+}
+.fale{
+	display: flex;
+    justify-content: center;
+}
+#listas_medias{
+	display: flex;
+    justify-content: center;
+}
+#responsive{
+	width: 100%;
+	height:100%;
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.center{
+	display: flex;
+    justify-content: center;
 }
 @media screen and (max-width: 900px) {
-  .gal_img {
-    height: 80px;
-    position: relative;
-    top: 82%;
-    margin-left: 2px;
-    margin-right: 2px;
-  }
+	#responsive {
+		width: 100%;
+		height:100%;
+		display: inline-block;
+		justify-content: center;
+		align-items: flex-end;
+		position: relative;	
+	}
+	#gallery{
+		width: 75%;
+		height: 520px;
+		position: relative;
+		background-color: lightgrey;
+		border-radius: 5px;
+		margin: 1% 12% 5% 12%;
+	}
+	#contact{
+		width: 75%;
+		margin: 1% 12% 12% 12%;
+	}
+	#lista{
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		justify-content: space-between;
+		display: flex;
+		padding: 3% 15%;
+		border-radius:20px;
+	}
+	#contact{
+		bottom:0px;
+	}
+	#descricao{
+		margin-top: 10%;
+		padding: 5%;
+	}
 }
