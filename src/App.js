@@ -33,7 +33,10 @@ let img_arr = [
     ]},
     {
         descricao: "Quando passou por testes, Jesus orou “com fortes clamores e lágrimas”. (Heb. 5:7) As orações fervorosas dele mostraram que seu coração era leal a Jeová e o ajudaram a não desistir de ser obediente. Para Jeová, as orações de Jesus eram como o aroma doce e agradável de um incenso. O modo como Jesus viveu deixou Jeová muito feliz. E Jesus provou que a maneira de seu Pai governar é realmente a melhor. Nós também podemos imitar Jesus. Como? Por fazer o nosso máximo para obedecer a Jeová e ser leal a ele. Quando passar por testes, ore de todo o coração pedindo que Jeová o ajude a fazer o que agrada a ele. Assim, você mostra que apoia o modo de Jeová governar. Além disso, lembre-se que Jeová não vai aceitar nossas orações se estivermos fazendo coisas que ele odeia. Por outro lado, se estivermos fazendo o que é certo, Jeová vai aceitar nossas orações sinceras. Elas serão para ele como incenso agradável. Tenha certeza de que sua integridade e sua obediência deixam Jeová muito feliz. w19.11 21-22 §§ 7-8",
-        servicos: [{ nome: 'fachina', valor:"12,00" },{ nome: 'cuidar de idoso', valor:"120,00" }, { nome: 'cuidar de criança', valor:"150,00" }]
+        servicos: [{ nome: 'fachina', valor:"12,00" },{ nome: 'cuidar de idoso', valor:"120,00" }, { nome: 'cuidar de criança', valor:"150,00" }],
+        perfil: "https://http2.mlstatic.com/D_NQ_NP_614041-MLB27185740295_042018-O.webp",
+        nome:"João Antônio",
+        sobre:"A Tradução do Novo Mundo (Edição de Estudo) é grátis. Ela contém mídias, notas de rodapé, referências cruzadas e outras ajudas para o estudo da Bíblia."
     }
     ];
 
@@ -70,14 +73,14 @@ let img_arr = [
                             <span></span>
                         </div>
                 
-                        <div onClick={this.next} className="trig r-trig" id="right">
+                        <div  onClick={this.next} className="trig r-trig" id="right">
                             <span></span>
                             <span></span>
                         </div>
                         <div id="limite">
                             <img src={img_arr[0].galeria[this.state.idx].image} alt="" key="89" id="display_img"/>   
                             {img_arr[0].galeria.map((a,b)=>            
-                            <span>                
+                            <span key={b+b+b}>                
                                 <img onClick={this.jump} src={a.image} key={b} alt="" id={a.id} className="gal_img"/>
                             </span>
                             )}  
@@ -98,18 +101,33 @@ let img_arr = [
                         </div>
                         <div id="media"> 
                             <span>
-                                    <p id="bold" class="center">
-                                        Fale conosco
-                                    </p>
-                            </span>                               
+                                <p id="bold" className="center">
+                                {img_arr[1].nome}
+                                </p>
+                            </span>
+                            <div className="all">
+                                <div id="quadro">
+                                    <img src={img_arr[1].perfil} alt="" id="foto_perfil"/>
+                                </div>                             
+                            </div> 
+                            <div className="all">
+                                <p className="sobre">
+                                {img_arr[1].sobre}
+                                </p>                             
+                            </div>  
+                            <span>
+                                <p id="bold" className="center">
+                                    Fale comigo
+                                </p>
+                            </span>
                             <span id="listas_medias">
-                                <a  target="_blank" rel="noreferrer" href="https://www.facebook.com/deivid.almeida.9803">
+                                <a key="face" target="_blank" rel="noreferrer" href="https://www.facebook.com/deivid.almeida.9803">
                                     <img id="face" className="icone"  src={face} alt=""/>
                                 </a>
-                                <a  target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5575992581723">
+                                <a key="whats" target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5575992581723">
                                     <img id="whats" className="icone"  src={whats} alt=""/>
                                 </a>
-                                <a  target="_blank" rel="noreferrer" href="http://instagram.com/_u/mr.davialmeida/">
+                                <a key="insta" target="_blank" rel="noreferrer" href="http://instagram.com/_u/mr.davialmeida/">
                                     <img id="whats" className="icone"  src={insta} alt=""/>
                                 </a>
                             </span>

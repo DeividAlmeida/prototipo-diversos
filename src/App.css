@@ -139,7 +139,7 @@ main {
 	width: 32%;
 	margin-left:7%;
 	position:relative;
-	bottom:50px;
+	height: 520px;
 }
 #lista{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -166,13 +166,15 @@ main {
 	padding-left: 25px;
 }
 #media{
-	display: grid;
+    border-radius: 20px;
+    height: auto;
     justify-content: center;
-	width: 75%;
-    margin: 1% 12% 12% 12%;
+    margin: 10%;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    padding: 10px;
 }
 .icone{
-	height:52px;
+	height:20px;
 	cursor: pointer;
 	padding: 5px;
 }
@@ -196,6 +198,23 @@ main {
 	display: flex;
     justify-content: center;
 }
+#quadro{
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  display: flex;
+  border-radius: 100%;
+}
+#foto_perfil{
+  width: 100%;
+  height: auto;
+}
+.all{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
 @media screen and (max-width: 900px) {
 	#responsive {
 		width: 100%;
@@ -216,6 +235,7 @@ main {
 	#contact{
 		width: 75%;
 		margin: 1% 12% 12% 12%;
+    
 	}
 	#lista{
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -231,4 +251,9 @@ main {
 		margin-top: 10%;
 		padding: 5%;
 	}
+}
+.sobre{
+  text-align: center;
+    margin: 2%;
+    font-size: x-small;
 }
