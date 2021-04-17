@@ -3,6 +3,8 @@ import './App.css';
 import face from './media/024-facebook.svg';
 import whats from './media/109-whatsapp.svg';
 import insta from './media/044-instagram.svg';
+import {Link} from 'react-router-dom';
+//https://www.youtube.com/watch?v=4Tb8dp5GYqI
 let img_arr = [
     {galeria:[
         {
@@ -66,6 +68,7 @@ let img_arr = [
 
         return (
             <main> 
+                <Link to="/pesquisa" >bvvcx</Link>
                 <div id="responsive">                        
                     <div id="gallery">
                         <div onClick={this.prev} className="trig l-trig" id="left">
@@ -78,7 +81,7 @@ let img_arr = [
                             <span></span>
                         </div>
                         <div id="limite">
-                            <img src={img_arr[0].galeria[this.state.idx].image} alt="" key="89" id="display_img"/>   
+                            <img src={img_arr[0].galeria[this.state.idx].image} alt="" key="89" id="display_img" className="tc-animation-fade"/>   
                             {img_arr[0].galeria.map((a,b)=>            
                             <span key={b+b+b}>                
                                 <img onClick={this.jump} src={a.image} key={b} alt="" id={a.id} className="gal_img"/>
